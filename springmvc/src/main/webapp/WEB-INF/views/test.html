@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+console.log(b);
+var b = 20;
+
+
+/*  var a;
+console.log(a);
+a=10; */
+
+
+/* console.log(a);
+var a;
+a=10; */
+
+
+/* console.log(a);
+let a;
+a=10; */
+
+let a;
+console.log(a);
+a=10;
+
+
+test()
+function test() {
+	console.log('test')
+}
+
+/* const b;
+console.log(b)
+b = 20; */
+
+/* console.log(c);
+const c = 30; */
+
+/* const d = 40;
+d = 50;
+console.log(d) */
+
+const obj = {
+	fname: 'jay',
+	age: 20
+}
+
+obj.age = 30;
+console.log(obj)
+
+/* obj = {age:50}
+console.log(obj) */
+
+/* function fun() {
+	let temp = 10;
+	console.log(temp1)
+	return function() {
+		let temp1 = 20;
+		console.log(temp)
+	}
+}
+
+fun()() */
+
+function fun() {
+	this.temp = 10;
+	setTimeout(function() {
+		console.log(this.temp)
+	}, 100);
+	return function() {
+		console.log(this.temp)
+		setTimeout(function() {
+			console.log(this.temp)
+		}, 100);
+	}
+}
+fun()()
+
+</script>
+</body>
+</html>
